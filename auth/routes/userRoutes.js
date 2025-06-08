@@ -3,8 +3,7 @@ const router = express.Router()
 const userMiddleware = require('../middleware/userMiddleware')
 const {registerUser, loginUser} = require('../controllers/userController')
 
-
 router.post('/register',  registerUser)
-router.post('/login', userMiddleware, loginUser)
+router.post('/login', loginUser)
 
 module.exports = router
